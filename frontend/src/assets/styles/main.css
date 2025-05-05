@@ -1,0 +1,374 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Palet warna utama */
+  :root {
+    --primary-color: #38bdf8; /* Biru utama */
+    --primary-hover: #0ea5e9; /* Biru hover */
+    --background-color: #0f172a; /* Latar belakang gelap */
+    --navbar-color: #1e293b; /* Warna navbar */
+    --text-color: #ffffff; /* Warna teks */
+    --input-border: #ccc; /* Warna border input */
+    --button-bg: #38bdf8; /* Warna tombol */
+    --button-hover: #0ea5e9; /* Warna hover tombol */
+  }
+  
+  :root[data-theme="default"] {
+    --background-color: #f5f5f5;
+    --navbar-color: #333;
+    --text-color: #000;
+    --button-bg: #007bff;
+    --button-hover: #0056b3;
+  }
+  
+  :root[data-theme="blue"] {
+    --background-color: #e3f2fd;
+    --navbar-color: #0d47a1;
+    --text-color: #000;
+    --button-bg: #2196f3;
+    --button-hover: #1976d2;
+  }
+  
+  :root[data-theme="green"] {
+    --background-color: #e8f5e9;
+    --navbar-color: #1b5e20;
+    --text-color: #000;
+    --button-bg: #4caf50;
+    --button-hover: #388e3c;
+  }
+  
+  :root[data-theme="purple"] {
+    --background-color: #f3e5f5;
+    --navbar-color: #4a148c;
+    --text-color: #000;
+    --button-bg: #9c27b0;
+    --button-hover: #7b1fa2;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--navbar-color);
+  }
+  
+  .navbar-brand h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .navbar .logo h1 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s;
+  }
+  
+  .navbar-links a:hover {
+    color: #60a5fa;
+  }
+  
+  .nav-links a:hover {
+    color: #38bdf8;
+  }
+  
+  /* Home Page */
+  .home-page {
+    text-align: center;
+    padding: 3rem 2rem;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .home-page h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .home-page p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+  }
+  
+  .cta-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #38bdf8;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .cta-button:hover {
+    background-color: #60a5fa;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  
+    .home-page h2 {
+      font-size: 1.8rem;
+    }
+  
+    .home-page p {
+      font-size: 1rem;
+    }
+
+    .navbar ul {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .navbar button {
+      width: 100%;
+    }
+
+    .page {
+      padding: 1rem;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    ul li {
+      margin-bottom: 1rem;
+    }
+
+    button {
+      width: 100%;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    form input,
+    form select,
+    form button {
+      width: 100%;
+    }
+
+    form {
+      padding: 1rem;
+    }
+
+    ul {
+      flex-direction: column;
+    }
+
+    ul li {
+      width: 100%;
+    }
+
+    .transaction-history li {
+      width: 100%;
+    }
+  }
+
+/* Tambahkan di main.css */
+.home {
+  text-align: center;
+  padding: 2rem;
+}
+
+.app {
+  text-align: center;
+  padding: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: var(--navbar-color);
+  border-radius: 8px;
+}
+
+/* Styling untuk form transaksi */
+form {
+  background-color: var(--background-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+form input,
+form select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+form button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--button-hover);
+}
+
+form input,
+form select,
+form button {
+  margin-bottom: 1rem;
+}
+
+/* Styling untuk daftar cryptocurrency */
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+ul li {
+  background-color: var(--navbar-color);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+ul li:hover {
+  transform: scale(1.05);
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 1rem; /* Tambahkan padding atas dan bawah */
+  background-color: var(--navbar-color);
+  color: var(--text-color);
+  position: relative; /* Pastikan footer tidak fixed */
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+.exchange-page {
+  padding: 2rem;
+  color: var(--text-color);
+}
+
+.transaction-history {
+  margin-top: 2rem;
+}
+
+/* Styling untuk riwayat transaksi */
+.transaction-history ul {
+  padding: 0;
+  list-style: none;
+}
+
+.transaction-history li {
+  background-color: var(--navbar-color);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .navbar {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .footer {
+  background-color: #1e1e1e;
+}
+
+button {
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+  transform: scale(1.05);
+}

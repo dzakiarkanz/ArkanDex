@@ -1,0 +1,181 @@
+.exchange {
+  padding: 2rem;
+  text-align: center;
+}
+
+.searchInput {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input, select, button {
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+  transform: scale(1.05);
+}
+
+.cryptoList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+/* Hover effect untuk elemen daftar cryptocurrency */
+.cryptoList li {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative; /* Untuk garis bawah */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cryptoList li:hover {
+  background-color: var(--button-hover); /* Warna latar belakang saat di-hover */
+  transform: scale(1.05); /* Sedikit memperbesar elemen */
+}
+
+.cryptoList li span {
+  color: var(--text-color); /* Warna teks default */
+  text-decoration: none; /* Hilangkan garis bawah default */
+  position: relative; /* Untuk menambahkan garis bawah */
+}
+
+.cryptoList li span::after {
+  content: ""; /* Tambahkan elemen garis bawah */
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Posisi garis di bawah teks */
+  width: 0;
+  height: 2px;
+  background-color: var(--text-color); /* Warna garis */
+  transition: width 0.3s ease; /* Animasi garis */
+}
+
+.cryptoList li:hover span::after {
+  width: 100%; /* Garis penuh saat di-hover */
+}
+
+.transactionList {
+  list-style: none;
+  padding: 0;
+}
+
+.transactionList li {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.clearButton {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.clearButton:hover {
+  background-color: darkred;
+}
+
+/* Styling untuk link */
+a {
+  color: var(--text-color); /* Warna teks default */
+  text-decoration: none; /* Hilangkan garis bawah default */
+  position: relative; /* Untuk menambahkan garis bawah saat hover */
+}
+
+a:hover {
+  color: var(--button-hover); /* Warna teks saat di-hover */
+}
+
+a::after {
+  content: ""; /* Tambahkan elemen garis bawah */
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Posisi garis di bawah teks */
+  width: 0;
+  height: 2px;
+  background-color: var(--button-hover); /* Warna garis */
+  transition: width 0.3s ease; /* Animasi garis */
+}
+
+a:hover::after {
+  width: 100%; /* Garis penuh saat di-hover */
+}
+
+/* Styling untuk tombol pagination */
+.pagination {
+  display: flex;
+  justify-content: center; /* Pusatkan tombol */
+  gap: 1rem; /* Berikan jarak antar tombol */
+  margin-top: 1.5rem; /* Tambahkan jarak atas */
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination button:hover {
+  background-color: var(--button-hover);
+  transform: scale(1.05); /* Efek interaktif saat hover */
+}
+
+.pagination button:disabled {
+  background-color: #ccc; /* Warna tombol saat disabled */
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .pagination button {
+    padding: 0.5rem 0.75rem; /* Sesuaikan ukuran tombol */
+    font-size: 0.9rem; /* Perkecil ukuran teks */
+  }
+}
+
+/* Styling untuk tulisan ArkanDex */
+.brand {
+  color: var(--button-hover); /* Warna biru khas */
+  font-weight: bold; /* Teks tebal */
+  font-size: 1.5rem; /* Ukuran teks */
+  text-decoration: none; /* Hilangkan garis bawah */
+}
+
+.brand:hover {
+  color: var(--text-color); /* Warna teks saat di-hover */
+}
